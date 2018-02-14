@@ -14,3 +14,8 @@ myApp
   .run(function () {
     // initialize
   });
+
+  //controller is a function
+  myApp.controller('myController', ['$scope',function($scope){
+    $scope.myFirstName = 'krishna';
+  }]);
