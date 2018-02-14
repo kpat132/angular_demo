@@ -7,7 +7,7 @@ angular.module('myApp', []);
 // retrieval has only one argument
 let myApp = angular.module('myApp');
 
-myApp
+angular.module('myApp')
   .config(function () {
     // config
   })
@@ -15,8 +15,4 @@ myApp
     // initialize
   });
 
-  //controller is a function
-  myApp.controller('myController', ['$scope',function($scope){
-    $scope.myFirstName = 'krishna';
-    $scope.myModel = 'Ready Player One'
-  }]);
+ 
