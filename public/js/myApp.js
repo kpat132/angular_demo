@@ -11,8 +11,10 @@ angular.module('myApp')
   .config(function () {
     // config
   })
-  .run(function () {
-    // initialize
-  });
+  .run(['APP_VERSION', '$rootScope', function (APP_VERSION, $rootScope) {
+   $rootScope.version = APP_VERSION;
+    
+
+  }]);
 
  
