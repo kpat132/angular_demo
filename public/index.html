@@ -33,7 +33,17 @@
     <br>
     {{versionedCharacter}}
     <br>
+
+    <form>
+      <input type = "text" ng-model = 'newBook.title'>
+      <br>
+      <input type = 'text' ng-model = 'newBook.author'>
+      <br>
+      <button ng-click = 'addBook()'>Add Book</button>
+    </form>
+
     <ul>
+      <!-- ng repeat allows us to iterate, similar to {{each}} in handlebars-->
       <li ng-repeat = 'book in books'>
         {{book.title}} : {{book.author}}
       </li>

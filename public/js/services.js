@@ -24,4 +24,7 @@ angular.module(`myApp`)
   this.getBook = function(){
     return this.books[index];
   }
+  this.addBook = function(book){
+    this.books.push(book);
+  }
 }])
