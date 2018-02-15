@@ -44,7 +44,10 @@
         {{book.title}} : {{book.author}}
       </li>
     </ul>
-    {{ movies() | filter:year=2000 }}
+    {{movies() | filter:title = 'Aliens'}}
+    <br>
+    {{ movies() | beforeYearFilter: 2000 }}
+
   </div>
 
 
@@ -57,6 +60,7 @@
   <script type="text/javascript" src="/js/factories.js"></script>
   <script type="text/javascript" src="/js/services.js"></script>
   <script type="text/javascript" src="/js/providers.js"></script>
+  <script type="text/javascript" src="/js/filters.js"></script>
 </body>
 
 </html>
