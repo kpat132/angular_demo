@@ -33,7 +33,11 @@
     <br>
     {{versionedCharacter}}
     <br>
-    {{books}}
+    <ul>
+      <li ng-repeat = 'book in books'>
+        {{book.title}} : {{book.author}}
+      </li>
+    </ul>
   </div>
 
   
