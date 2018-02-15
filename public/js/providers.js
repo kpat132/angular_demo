@@ -5,7 +5,7 @@ angular.module('myApp')
     this.setEndpoint = function (endpoint) {
       this.endpoint = endpoint;
     }
-    this.$get = ['http',function ($http) {
+    this.$get = ['$http',function ($http) {
       let endpoint = this.endpoint;
       let movies;
 

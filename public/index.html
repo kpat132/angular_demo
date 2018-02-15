@@ -44,7 +44,7 @@
         {{book.title}} : {{book.author}}
       </li>
     </ul>
-    {{movies()}}
+    {{ movies() | filter:year=2000 }}
   </div>
 
 
