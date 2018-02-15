@@ -8,8 +8,9 @@ angular.module('myApp', []);
 let myApp = angular.module('myApp');
 
 angular.module('myApp')
-  .config(function () {
+  .config(function (MoviesProvider) {
     // config
+    MoviesProvider.setEndpoint(`http://localhost:8080/movies`)
   })
   .run(['APP_VERSION', '$rootScope', function (APP_VERSION, $rootScope) {
    $rootScope.version = APP_VERSION;
