@@ -1,11 +1,6 @@
 angular.module(`myApp`)
-  .controller(`myController`, [`$scope`, `mainCharacter`, `CharacterVersionFactory`, `BookService`,`Movies`, function ($scope, mainCharacter, CharacterVersionFactory, BookService,Movies) {
-    $scope.myFirstName = `krishna`;
-    $scope.myModel = `Ready Player One`
-    $scope.mainCharacter = mainCharacter;
-    $scope.versionedCharacter = CharacterVersionFactory.getCharacter();
+.controller(`BooksController`, [`$scope`,`BookService`,function($scope,BookService){
 
-    
 
     $scope.books = BookService.getBooks();
     $scope.newBook = {
@@ -26,7 +21,4 @@ angular.module(`myApp`)
       $scope.newBook.title = ``,
         $scope.newBook.author = ``
     }
-
-    //movies
-    $scope.movies = Movies.getMovies;
-  }]);
+}])

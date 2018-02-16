@@ -9,63 +9,29 @@
 </head>
 
 <body ng-app='myApp'>
-
-  <h1>{{'Hello' + 'Angular'}}</h1>
-
-  <div>
-    {{2 + 3}}
-  </div>
+  <ng-view></ng-view>
 
   <div>
   </div>
-
-  <div ng-controller='myController'>
-    {{ myFirstName }}
-    <br>
-
-    <input type="text" ng-model='myModel'>
-    <br><br> {{ myModel }}
-    <br><br> {{ mainCharacter }}
-    <br><br> {{version}}
-    <br><br> {{versionedCharacter}}
-    <br>
-
-    <form>
-      <input type="text" ng-model='newBook.title'>
-      <br>
-      <input type='text' ng-model='newBook.author'>
-      <br>
-      <button ng-click='addBook()'>Add Book</button>
-    </form>
-
-    <ul>
-      <!-- ng repeat allows us to iterate, similar to {{each}} in handlebars-->
-      <li ng-repeat='book in books'>
-        {{book.title}} : {{book.author}}
-      </li>
-    </ul>
-    <br><br>
-    {{movies() | filter:title = 'Aliens'}}
-    
-    {{ movies() | beforeYearFilter: 2000 | orderBy: '-year'}}
-
-    <br><br><br><br><br>
-    <input type='text' ng-model = 'movieFilter'>
-    {{movies() | filter:movieFilter}}
 
   </div>
 
 
 
   <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+  <script type='text/javascript' src = 'https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.js'></script>
   <script type="text/javascript" src="/js/myApp.js"></script>
-  <script type="text/javascript" src="/js/controllers.js"></script>
+ 
   <script type="text/javascript" src="/js/values.js"></script>
   <script type="text/javascript" src="/js/constants.js"></script>
   <script type="text/javascript" src="/js/factories.js"></script>
   <script type="text/javascript" src="/js/services.js"></script>
   <script type="text/javascript" src="/js/providers.js"></script>
   <script type="text/javascript" src="/js/filters.js"></script>
+  <script type="text/javascript" src="/controllers/home.controller.js"></script>
+  <script type="text/javascript" src="/controllers/books.controller.js"></script>
+  <script type="text/javascript" src="/controllers/movies.controller.js"></script>
+  <script type="text/javascript" src="/controllers/other.controller.js"></script>
 </body>
 
 </html>

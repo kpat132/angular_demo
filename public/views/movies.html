@@ -1,0 +1,9 @@
+    {{movies() | filter:title = 'Aliens'}}
+    
+    {{ movies() | beforeYearFilter: 2000 | orderBy: '-year'}}
+
+    <br><br>
+    <input type='text' ng-model = 'movieFilter'>
+    {{movies() | filter:movieFilter}}
+
+    <br><br><br>
