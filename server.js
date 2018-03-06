@@ -5,11 +5,11 @@ const PORT = process.env.PORT || 8080;
 
 app.use(express.static('public'));
 
-app.get('/movies', (req, res) => {
+app.get('/api/movies', (req, res) => {
   return res.json([
     {
       title: `Aliens`,
-      director: `Jame Cameron`,
+      director: `James Cameron`,
       year: 1989
     },
     {
@@ -29,6 +29,14 @@ app.get('/movies', (req, res) => {
     }
   ])
 })
+
+app.get('/*', (req,res)=> {
+  var options = {
+    root: __dirname + '/public',
+  };
+  res.sendFile('index.html',options);
+})
+
 
 app.listen(PORT, () => {
   console.log(`Server is listening on ${PORT}`)

@@ -3,6 +3,7 @@ angular.module(`myApp`)
 
 
     $scope.books = BookService.getBooks();
+    
     $scope.newBook = {
       title: ``,
       author: ``

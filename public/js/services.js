@@ -1,5 +1,7 @@
 angular.module(`myApp`)
   .service(`BookService`, [function () {
+    //this will fire immediately here
+    //$http.get
     this.books = [
       {
         title: `Moby Dick`,
@@ -19,6 +21,7 @@ angular.module(`myApp`)
       }
     ];
     this.getBooks = function () {
+
       return this.books;
     }
     this.getBook = function () {
